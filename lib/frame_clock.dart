@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:isolate';
 import 'dart:async';
 import 'dart:math';
@@ -10,6 +9,7 @@ class FrameClock {
     int counter = 0;
     int time = waitFix + rng.nextInt(waitVariable);
     print('Server Frame generation defined on [$time]');
+
     Timer.periodic(Duration(milliseconds: time), (_) {
       counter++;
       String sendMsg = 'Counter: $counter';
